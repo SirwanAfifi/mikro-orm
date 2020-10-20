@@ -132,4 +132,20 @@ module.exports = {
       },
     ],
   ],
+  plugins: [
+    [
+      'docusaurus-plugin-typedoc',
+      {
+        // Plugin options
+        inputFiles: ['../packages/core/src'],
+
+        // TypeDoc options (see typedoc --help)
+        mode: 'file',
+        target: 'ES2017',
+        moduleResolution: 'node',
+        ignoreCompilerErrors: true,
+        tsconfig: '../packages/core/tsconfig.json',
+      },
+    ],
+  ],
 };
